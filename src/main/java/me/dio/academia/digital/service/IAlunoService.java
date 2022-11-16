@@ -10,9 +10,9 @@ public interface IAlunoService {
 
    Aluno create(Aluno aluno);
 
-   Aluno get(Long id);
+   Long get(Long id);
 
-   List<Aluno> getAll(String dataDeNascimento);
+   List<Aluno> getAll();
 
    Aluno update(Long id, Aluno aluno);
 
