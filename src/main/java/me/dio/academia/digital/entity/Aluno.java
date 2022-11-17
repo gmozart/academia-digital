@@ -36,4 +36,6 @@ public class Aluno {
     @JsonIgnore
     private List<AvaliacaoFisica> valiacoes = new ArrayList<>();
 
+    public void setDataDeNascimento(LocalDate dataDeNascimento) {
+    }
 }

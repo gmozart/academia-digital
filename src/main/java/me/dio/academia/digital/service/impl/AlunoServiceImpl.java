@@ -1,5 +1,6 @@
 package me.dio.academia.digital.service.impl;
 
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import me.dio.academia.digital.entity.Aluno;
 import me.dio.academia.digital.entity.AvaliacaoFisica;
 import me.dio.academia.digital.entity.form.AlunoForm;
@@ -40,7 +41,7 @@ public class AlunoServiceImpl implements IAlunoService {
         if(dataDeNascimento == null) {
             return repository.findAll();
         } else {
-            LocalDate localDate = LocalDate.parse(dataDeNascimento, JavaTimeUtils.LOCAL_DATE_FORMATTER);
+            LocalDate localDate = LocalDate.parse(dataDeNascimento);
             return repository.findByDataDeNascimento(localDate);
         }
 
@@ -60,7 +61,6 @@ public class AlunoServiceImpl implements IAlunoService {
 
         Aluno aluno = repository.findById(id).get();
 
-        return aluno.getAvaliacoes();
-
+        return aluno.getValiacoes();
     }
 }
