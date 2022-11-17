@@ -36,5 +36,4 @@ public class Aluno {
     @JsonIgnore
     private List<AvaliacaoFisica> valiacoes = new ArrayList<>();
 
-
 }
